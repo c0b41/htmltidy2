@@ -26,7 +26,7 @@ function TidyWorker(opts) {
   
   this.writable= true;
   this.readable= true;
-  this._worker = spawn('tidy', parseOpts(mergedOpts));
+  this._worker = spawn('tidy5', parseOpts(mergedOpts));
   var self = this;
   var errors = '';
   this._worker.stdin.on('drain', function () {
