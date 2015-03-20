@@ -1,6 +1,7 @@
 
 var http = require('http');
 var tidy = require('../htmltidy');
+var fs = require('fs');
 
 // setup options
 var opts = {
@@ -16,8 +17,8 @@ var opts = {
 var worker = tidy.createWorker(opts);
 
 http.get({
-  host: "www.yahoo.com",
+  host: "www.example.com",
   path: "/" },
   function (res) {
-    res.pipe(worker).pipe(process.stdout);
+    res.pipe(worker).pipe(fs.createWriteStream('./test/expected/example.html'));
   });

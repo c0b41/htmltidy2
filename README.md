@@ -1,3 +1,7 @@
+[![Build Status](http://img.shields.io/travis/ayhankuru/htmltidy2.svg?style=flat-square)](https://travis-ci.org/ayhankuru/htmltidy2) [![Build Status](https://img.shields.io/david/ayhankuru/htmltidy2.svg?style=flat-square)](https://david-dm.org/ayhankuru/htmltidy2) [![io.js supported](https://img.shields.io/badge/io.js-supported-green.svg?style=flat-square)](https://iojs.org)
+
+
+
 HTML Tidy
 =========
 
@@ -16,15 +20,16 @@ such as XSL transforms.
 
 Installation
 ------------
-To use this library simply install it using [npm](http://npmjs.org/):
-
-    npm install htmltidy
+```sh
+$ sudo npm install -g tidy-html
+$ npm install htmltidy2
+```
 
 Example
 -------
 
 ```javascript
-var tidy = require('htmltidy').tidy;
+var tidy = require('htmltidy2').tidy;
 tidy('<table><tr><td>badly formatted html</tr>', function(err, html) {
     console.log(html);
 });
@@ -55,32 +60,12 @@ request.get('http://www.nodejs.org').pipe(worker).pipe(process.stdout);
 Platform support
 ----------------
 * Linux
-* Windows
 * OSX (experimental)
 
-Changelog
----------
-    0.0.6 - Apr 18, 2013
-      - bug fix update
-    0.0.5 - Feb 25, 2013
-      - changes contributed by Keith Rosenberg
-    0.0.4 - Feb 23, 2013
-      - fixed error in package.json
-    0.0.3 - Jan 11, 2013
-      - fixed engine version error
-    0.0.2 - Oct 5, 2012
-      - node Stream support, pipe and so on
-      - more examples
-      - example with worker pool for web front ends
-      - experimental support for osx #1
-    0.0.1 - Sep 29, 2012
-      - First NPM release
 
-Credits
+Experimental Fork!
 -------
-* [HTML Tidy Library Project](http://tidy.sourceforge.net/)
-* [HTML Tidy for HTML5](http://w3c.github.com/tidy-html5/)
-* [Michael Leaney](http://stackoverflow.com/a/8220285/770155)
+* [HTML Tidy](https://github.com/vavere/htmltidy) 
 
 
 

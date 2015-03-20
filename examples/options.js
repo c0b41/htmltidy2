@@ -1,5 +1,7 @@
 
 var tidy = require('../htmltidy').tidy;
+var fs = require('fs');
+
 
 var text = '<table><tr><td>badly formatted html</tr>';
 
@@ -18,5 +20,6 @@ tidy(text, opts, function(err, html) {
     if (err) 
       return console.log('ERROR: ' + err);
     console.log(html);
+    fs.writeFileSync('./test/expected/options.html', html, 'utf8');
 });
 
