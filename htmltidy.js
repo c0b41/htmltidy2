@@ -143,7 +143,7 @@ function chooseExec() {
       tidyExe = path.join('linux', 'tidy5');
       break;
     case 'darwin':
-      throw new Error('unsupported execution platform');
+      tidyExe = path.join('linux', 'tidy5');
       break;
     default:
       throw new Error('unsupported execution platform');
