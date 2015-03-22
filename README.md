@@ -2,7 +2,7 @@
 
 
 
-HTML Tidy
+HTML Tidy2
 =========
 
 Node Wrapper for HTML Tidy
@@ -21,7 +21,6 @@ such as XSL transforms.
 Installation
 ------------
 ```sh
-$ sudo npm install -g tidy-html
 $ npm install htmltidy2
 ```
 
@@ -59,8 +58,8 @@ request.get('http://www.nodejs.org').pipe(worker).pipe(process.stdout);
 
 Platform support
 ----------------
+* Windows
 * Linux
-* OSX (experimental)
 
 
 Experimental Fork!
