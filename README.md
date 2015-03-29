@@ -1,4 +1,5 @@
-[![Travis Build Status](http://img.shields.io/travis/ayhankuru/htmltidy2y.svg?style=flat-square)](https://travis-ci.org/ayhankuru/htmltidy2y) [![Circle Build Status](https://img.shields.io/circleci/project/ayhankuru/htmltidy2y.svg?style=flat-square)](https://circleci.com/gh/ayhankuru/htmltidy2y) [![Build Status](https://img.shields.io/david/ayhankuru/htmltidy2y.svg?style=flat-square)](https://david-dm.org/ayhankuru/htmltidy2y) [![io.js supported](https://img.shields.io/badge/io.js-supported-green.svg?style=flat-square)](https://iojs.org)
+[![Travis Build Status](http://img.shields.io/travis/ayhankuru/htmltidy2.svg?style=flat-square)](https://travis-ci.org/ayhankuru/htmltidy2) [![Circle Build Status](https://img.shields.io/circleci/project/ayhankuru/htmltidy2.svg?style=flat-square)](https://circleci.com/gh/ayhankuru/htmltidy2) [![Build Status](https://img.shields.io/david/ayhankuru/htmltidy2.svg?style=flat-square)](https://david-dm.org/ayhankuru/htmltidy2) [![io.js supported](https://img.shields.io/badge/io.js-supported-green.svg?style=flat-square)](https://iojs.org)
+
 
 
 
