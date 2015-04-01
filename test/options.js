@@ -22,7 +22,7 @@ describe('Htmltidy2 Options ', function () {
 			};
 		tidy(fix,opts, function(err, html) {
 		  	expect(err).to.exist;
-		  	expect(exp).to.eql(html);	
+		  	expect(html).to.eql(exp);	
 		  	done();
 		});
 
