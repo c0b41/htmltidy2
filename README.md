@@ -1,8 +1,10 @@
-[![Build Status](http://img.shields.io/travis/ayhankuru/htmltidy2.svg?style=flat-square)](https://travis-ci.org/ayhankuru/htmltidy2) [![Build Status](https://img.shields.io/david/ayhankuru/htmltidy2.svg?style=flat-square)](https://david-dm.org/ayhankuru/htmltidy2) [![io.js supported](https://img.shields.io/badge/io.js-supported-green.svg?style=flat-square)](https://iojs.org)
+[![Travis Build Status](http://img.shields.io/travis/ayhankuru/htmltidy2.svg?style=flat-square)](https://travis-ci.org/ayhankuru/htmltidy2) [![Circle Build Status](https://img.shields.io/circleci/project/ayhankuru/htmltidy2.svg?style=flat-square)](https://circleci.com/gh/ayhankuru/htmltidy2) [![Appveyor Build Status](https://img.shields.io/appveyor/ci/ayhankuru/htmltidy2.svg?style=flat-square)](https://ci.appveyor.com/project/ayhankuru/htmltidy2) [![Build Status](https://img.shields.io/david/ayhankuru/htmltidy2.svg?style=flat-square)](https://david-dm.org/ayhankuru/htmltidy2) [![io.js supported](https://img.shields.io/badge/io.js-supported-green.svg?style=flat-square)](https://iojs.org)
 
 
 
-HTML Tidy
+
+
+HTML Tidy2
 =========
 
 Node Wrapper for HTML Tidy
@@ -21,7 +23,6 @@ such as XSL transforms.
 Installation
 ------------
 ```sh
-$ sudo npm install -g tidy-html
 $ npm install htmltidy2
 ```
 
@@ -59,9 +60,9 @@ request.get('http://www.nodejs.org').pipe(worker).pipe(process.stdout);
 
 Platform support
 ----------------
+* Windows
 * Linux
-* OSX (experimental)
-
+* Osx (need test)
 
 Experimental Fork!
 -------

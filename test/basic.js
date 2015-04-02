@@ -14,7 +14,7 @@ describe('Htmltidy2 Basic ', function () {
 
 		tidy(fix, function(err, html) {
 		  	expect(err).to.exist;
-		  	expect(exp).to.eql(html);	
+		  	expect(html).to.eql(exp);	
 		  	done();
 		});
 
