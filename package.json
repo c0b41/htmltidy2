@@ -1,10 +1,9 @@
 {
   "name": "htmltidy2",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "HTML Tidy",
   "main": "htmltidy.js",
   "scripts": {
-    "preinstall":"npm install -g tidy-html",
     "test": "iojs node_modules/mocha/bin/mocha test/*.js --reporter spec --timeout 15000"
   },
   "repository": {
