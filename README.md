@@ -62,7 +62,7 @@ Platform support
 ----------------
 * Windows
 * Linux
-
+* Osx (need test)
 
 Experimental Fork!
 -------
