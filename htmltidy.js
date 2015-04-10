@@ -143,7 +143,6 @@ function chooseExec() {
       tidyExe = path.join('linux', 'tidy5');
       break;
     case 'darwin':
-      // execute file works
       tidyExe = path.join('darwin', 'tidy5');
       break;
     default:
