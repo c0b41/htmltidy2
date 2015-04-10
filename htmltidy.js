@@ -16,16 +16,16 @@ var DEFAULT_OPTS = {
   forceOutput: true,
   quiet: false
 };
- 
+
 // choose suitable executable
 var tidyExec = chooseExec();
 
 function TidyWorker(opts) {
   Stream.call(this);
-  
+
   // Store a reference to the merged options for consumption by error reporting logic
   var mergedOpts = merge(opts, DEFAULT_OPTS);
-  
+
   this.writable= true;
   this.readable= true;
   this._worker = spawn(tidyExec, parseOpts(mergedOpts));
@@ -63,9 +63,9 @@ function TidyWorker(opts) {
         }
         break;
     }
-    
+
     self.emit('end');
-    
+
   });
 }
 
@@ -144,7 +144,7 @@ function chooseExec() {
       break;
     case 'darwin':
       // execute file works
-      tidyExe = path.join('linux', 'tidy5');
+      tidyExe = path.join('darwin', 'tidy5');
       break;
     default:
       throw new Error('unsupported execution platform');
@@ -156,7 +156,7 @@ function chooseExec() {
       throw new Error('missing tidy executable: ' + tidyExe);
   return tidyExe;
 }
- 
+
 function parseOpts(opts) {
   opts = opts || {};
   var args = [];
