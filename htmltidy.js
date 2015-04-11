@@ -119,16 +119,16 @@ function tidy(text, opts, cb) {
     throw new Error('no callback provided for tidy');
 
   var worker = new TidyWorker(opts);
-  var result = new Array();
+  var result = '';
   var error = '';
   worker.on('data', function (data) {
-    result.push(data);
+    result += data;
   });
   worker.on('error', function (data) {
     error+= data;
   });
   worker.on('close', function (code) {
-    setImmediate(function(){cb(error, Buffer.concat(result).toString());});
+    setImmediate(function(){cb(error, result);});
   });
   worker.end(text);
 }
