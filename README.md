@@ -40,7 +40,7 @@ API
 ---
 __tidy(text, [options], callback)__
 
-Clean html like text according optional configuration [tidy options](http://w3c.github.com/tidy-html5/quickref.html).
+Clean html like text according optional configuration [tidy options](http://www.html-tidy.org/quickref.html).
 
 ```javascript
 var opts = {
@@ -62,7 +62,7 @@ Platform support
 ----------------
 * Windows
 * Linux
-* Osx (need test)
+* Osx
 
 Experimental Fork!
 -------
