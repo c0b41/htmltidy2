@@ -58,15 +58,6 @@ var worker = tidy.createWorker(opts);
 request.get('http://www.nodejs.org').pipe(worker).pipe(process.stdout);
 ```
 
-Platform support
-----------------
-* Windows
-* Linux
-* Osx
-
-Experimental Fork!
+##### Experimental Fork!
 -------
-* [HTML Tidy](https://github.com/vavere/htmltidy) 
-
-
-
+* [HTML Tidy](https://github.com/vavere/htmltidy)

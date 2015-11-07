@@ -4,7 +4,7 @@
   "description": "HTML Tidy",
   "main": "htmltidy.js",
   "scripts": {
-    "test": "iojs node_modules/mocha/bin/mocha test/*.js --reporter spec --timeout 15000"
+    "test": "mocha test/*.js --reporter spec --timeout 15000"
   },
   "repository": {
     "type": "git",
