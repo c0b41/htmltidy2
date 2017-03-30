@@ -1,6 +1,6 @@
 .c9*
 .settings
 node_modules
-
+.yarn_lock
 #The IDE folder
 .idea

@@ -1,5 +1,6 @@
 var Stream = require('stream').Stream;
 var inherits = require('util').inherits;
+var os = require('os');
 var fs = require('fs');
 var path = require('path');
 var spawn = require('child_process').spawn;
@@ -137,10 +138,18 @@ function chooseExec() {
   var tidyExe;
   switch (process.platform) {
     case 'win32':
-      tidyExe = path.join('win32','tidy5.exe');
+      if(process.arch == 'x64'){
+        tidyExe = path.join('win64/','tidy.exe');
+      } else {
+        tidyExe = path.join('win32/','tidy.exe');
+      }
       break;
     case 'linux':
-      tidyExe = path.join('linux', 'tidy5');
+      if(process.arch == 'x64'){
+        tidyExe = path.join('linux64/','tidy5');
+      } else {
+        tidyExe = path.join('linux32/','tidy5');
+      }
       break;
     case 'darwin':
       tidyExe = path.join('darwin', 'tidy5');
