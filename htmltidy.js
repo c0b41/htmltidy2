@@ -1,6 +1,5 @@
 var Stream = require('stream').Stream;
 var inherits = require('util').inherits;
-var os = require('os');
 var fs = require('fs');
 var path = require('path');
 var spawn = require('child_process').spawn;
@@ -146,13 +145,13 @@ function chooseExec() {
       break;
     case 'linux':
       if(process.arch == 'x64'){
-        tidyExe = path.join('linux64/','tidy5');
+        tidyExe = path.join('linux64/','tidy');
       } else {
-        tidyExe = path.join('linux32/','tidy5');
+        tidyExe = path.join('linux32/','tidy');
       }
       break;
     case 'darwin':
-      tidyExe = path.join('darwin', 'tidy5');
+      tidyExe = path.join('darwin', 'tidy');
       break;
     default:
       throw new Error('unsupported execution platform');
