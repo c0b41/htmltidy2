@@ -137,13 +137,21 @@ function chooseExec() {
   var tidyExe;
   switch (process.platform) {
     case 'win32':
-      tidyExe = path.join('win32','tidy5.exe');
+      if(process.arch == 'x64'){
+        tidyExe = path.join('win64/','tidy.exe');
+      } else {
+        tidyExe = path.join('win32/','tidy.exe');
+      }
       break;
     case 'linux':
-      tidyExe = path.join('linux', 'tidy5');
+      if(process.arch == 'x64'){
+        tidyExe = path.join('linux64/','tidy');
+      } else {
+        tidyExe = path.join('linux32/','tidy');
+      }
       break;
     case 'darwin':
-      tidyExe = path.join('darwin', 'tidy5');
+      tidyExe = path.join('darwin', 'tidy');
       break;
     default:
       throw new Error('unsupported execution platform');
