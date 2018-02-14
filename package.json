@@ -1,6 +1,6 @@
 {
   "name": "htmltidy2",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "HTML Tidy",
   "main": "htmltidy.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ayhankuru/htmltidy2"
+    "url": "https://github.com/c0b41/htmltidy2"
   },
-  "author": "Ayhan Kuru",
+  "author": "c0b41",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ayhankuru/htmltidy2/issues"
+    "url": "https://github.com/c0b41/htmltidy2/issues"
   },
-  "homepage": "https://github.com/ayhankuru/htmltidy2",
+  "homepage": "https://github.com/c0b41/htmltidy2",
   "devDependencies": {
     "expect.js": "^0.3.1",
     "mocha": "^3.2.0"
