@@ -37,7 +37,7 @@ API
 ---
 __tidy(text, [options], callback)__
 
-Clean html like text according optional configuration [tidy options](http://www.html-tidy.org/quickref.html).
+Clean html like text according optional configuration [tidy options](http://api.html-tidy.org/tidy/tidylib_api_5.6.0/tidy_quickref.html).
 
 ```javascript
 var opts = {
