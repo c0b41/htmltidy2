@@ -1,6 +1,6 @@
 
 
-HTML Tidy2
+HTML Tidy2 [![CI Status](https://github.com/c0b41/htmltidy2/actions/workflows/test.yml/badge.svg)](https://github.com/c0b41/htmltidy2/actions/workflows/test.yml)
 =========
 
 Node Wrapper for HTML Tidy
