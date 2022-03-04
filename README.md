@@ -1,4 +1,3 @@
-[![Travis Build Status](http://img.shields.io/travis/c0b41/htmltidy2.svg?style=flat-square)](https://travis-ci.org/c0b41/htmltidy2) [![Circle Build Status](https://img.shields.io/circleci/project/c0b41/htmltidy2.svg?style=flat-square)](https://circleci.com/gh/c0b41/htmltidy2) [![Appveyor Build Status](https://img.shields.io/appveyor/ci/c0b41/htmltidy2.svg?style=flat-square)](https://ci.appveyor.com/project/c0b41/htmltidy2) 
 
 
 HTML Tidy2
