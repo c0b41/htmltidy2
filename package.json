@@ -1,6 +1,6 @@
 {
   "name": "htmltidy2",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "HTML Tidy",
   "main": "htmltidy.js",
   "scripts": {
@@ -16,6 +16,9 @@
     "url": "https://github.com/c0b41/htmltidy2/issues"
   },
   "homepage": "https://github.com/c0b41/htmltidy2",
+  "engines": {
+    "node": ">= 12 || >= 14 || >= 16"
+  },
   "devDependencies": {
     "expect.js": "^0.3.1",
     "mocha": "^3.2.0"

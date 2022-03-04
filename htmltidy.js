@@ -26,8 +26,8 @@ function TidyWorker(opts) {
   // Store a reference to the merged options for consumption by error reporting logic
   var mergedOpts = merge(opts, DEFAULT_OPTS);
 
-  this.writable= true;
-  this.readable= true;
+  this.writable = true;
+  this.readable = true;
   this._worker = spawn(tidyExec, parseOpts(mergedOpts));
   this._worker.stdout.setEncoding('utf8');
   var self = this;
@@ -36,8 +36,8 @@ function TidyWorker(opts) {
     self.emit('drain');
   });
   this._worker.stdin.on('error', function (errors) {
-     self.emit('error', errors);
-   });
+    self.emit('error', errors);
+  });
   this._worker.stdout.on('data', function (data) {
     self.emit('data', data);
   });
@@ -45,20 +45,20 @@ function TidyWorker(opts) {
     self.emit('close');
   });
   this._worker.stderr.on('data', function (data) {
-    errors+= data;
+    errors += data;
   });
   this._worker.on('close', function (code) {
-    switch(code){
+    switch (code) {
       // If there were any warnings or errors from Tiny command
       case TIDY_WARN:
         // The user asks to see warnings.
-        if(mergedOpts.showWarnings){
+        if (mergedOpts.showWarnings) {
           self.emit('error', errors);
         }
         break;
       case TIDY_ERR:
         // The user asks to see errors.
-        if(mergedOpts.showErrors){
+        if (mergedOpts.showErrors) {
           self.emit('error', errors);
         }
         break;
@@ -83,14 +83,14 @@ TidyWorker.prototype.end = function (data) {
   this._worker.stdin.end(data);
 };
 
-TidyWorker.prototype.pause  = function () {
+TidyWorker.prototype.pause = function () {
   if (!this._worker)
     throw new Error('worker has been destroyed');
   if (this._worker.stdout.pause)
     this._worker.stdout.pause();
 };
 
-TidyWorker.prototype.resume  = function () {
+TidyWorker.prototype.resume = function () {
   if (!this._worker)
     throw new Error('worker has been destroyed');
   if (this._worker.stdout.resume)
@@ -101,7 +101,7 @@ TidyWorker.prototype.destroy = function () {
   if (this._worker)
     return;
   this._worker.kill();
-  this._worker= null;
+  this._worker = null;
   this.emit('close');
 };
 
@@ -125,10 +125,10 @@ function tidy(text, opts, cb) {
     result += data;
   });
   worker.on('error', function (data) {
-    error+= data;
+    error += data;
   });
   worker.on('close', function (code) {
-    setImmediate(function(){cb(error, result);});
+    setImmediate(function () { cb(error, result); });
   });
   worker.end(text);
 }
@@ -137,17 +137,17 @@ function chooseExec() {
   var tidyExe;
   switch (process.platform) {
     case 'win32':
-      if(process.arch == 'x64'){
-        tidyExe = path.join('win64/','tidy.exe');
+      if (process.arch == 'x64') {
+        tidyExe = path.join('win64/', 'tidy.exe');
       } else {
-        tidyExe = path.join('win32/','tidy.exe');
+        throw new Error('unsupported execution platform');
       }
       break;
     case 'linux':
-      if(process.arch == 'x64'){
-        tidyExe = path.join('linux64/','tidy');
+      if (process.arch == 'x64') {
+        tidyExe = path.join('linux64/', 'tidy');
       } else {
-        tidyExe = path.join('linux32/','tidy');
+        throw new Error('unsupported execution platform');
       }
       break;
     case 'darwin':
@@ -158,9 +158,9 @@ function chooseExec() {
   }
   tidyExe = path.join(__dirname, 'bin', tidyExe);
 
-  var existsSync = fs.existsSync||path.existsSync; // node > 0.6
+  var existsSync = fs.existsSync || path.existsSync; // node > 0.6
   if (!existsSync(tidyExe))
-      throw new Error('missing tidy executable: ' + tidyExe);
+    throw new Error('missing tidy executable: ' + tidyExe);
   return tidyExe;
 }
 
@@ -175,7 +175,7 @@ function parseOpts(opts) {
         args.push(opts[n]);
         break;
       case 'boolean':
-        args.push(opts[n]? 'yes': 'no');
+        args.push(opts[n] ? 'yes' : 'no');
         break;
       default:
         throw new Error('unknown option type');
@@ -185,7 +185,7 @@ function parseOpts(opts) {
 }
 
 function toHyphens(str) {
-    return str.replace(/([A-Z])/g, function (m, w) { return '-' + w.toLowerCase(); });
+  return str.replace(/([A-Z])/g, function (m, w) { return '-' + w.toLowerCase(); });
 }
 
 /**
