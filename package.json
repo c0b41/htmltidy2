@@ -16,6 +16,9 @@
     "url": "https://github.com/c0b41/htmltidy2/issues"
   },
   "homepage": "https://github.com/c0b41/htmltidy2",
+  "engines": {
+    "node": ">= 12 || >= 14 || >= 16"
+  },
   "devDependencies": {
     "expect.js": "^0.3.1",
     "mocha": "^3.2.0"
