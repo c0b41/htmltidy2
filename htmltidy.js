@@ -5,7 +5,6 @@ var path = require('path');
 var spawn = require('child_process').spawn;
 
 // tidy exit codes
-var TIDY_OK = 0;
 var TIDY_WARN = 1;
 var TIDY_ERR = 2;
 
