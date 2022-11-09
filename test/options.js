@@ -1,4 +1,4 @@
-var tidy = require('../htmltidy').tidy;
+var {tidy} = require('../htmltidy');
 var expect = require('expect.js');
 var fs  = require('fs');
 
