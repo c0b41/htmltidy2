@@ -2,10 +2,7 @@ var {tidy} = require('../htmltidy');
 var expect = require('expect.js');
 var fs  = require('fs');
 
-
-
 describe('Htmltidy2 Options ', function () {
-	
 
 	it('Test 1 : ', function (done) {
 		
