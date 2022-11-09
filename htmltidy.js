@@ -40,7 +40,7 @@ function TidyWorker(opts) {
   this._worker.stdout.on('data', function (data) {
     self.emit('data', data);
   });
-  this._worker.stdout.on('close', function (data) {
+  this._worker.stdout.on('close', function () {
     self.emit('close');
   });
   this._worker.stderr.on('data', function (data) {
@@ -126,7 +126,7 @@ function tidy(text, opts, cb) {
   worker.on('error', function (data) {
     error += data;
   });
-  worker.on('close', function (code) {
+  worker.on('close', function () {
     setImmediate(function () { cb(error, result); });
   });
   worker.end(text);
