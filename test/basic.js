@@ -1,11 +1,8 @@
-var tidy = require('../htmltidy').tidy;
+var {tidy} = require('../htmltidy');
 var expect = require('expect.js');
 var fs  = require('fs');
 
-
-
 describe('Htmltidy2 Basic ', function () {
-	
 
 	it('Test 1 : ', function (done) {
 		

@@ -1,8 +1,8 @@
-var Stream = require('stream').Stream;
-var inherits = require('util').inherits;
+var {Stream} = require('stream');
+var {inherits} = require('util');
 var fs = require('fs');
 var path = require('path');
-var spawn = require('child_process').spawn;
+var {spawn} = require('child_process');
 
 // tidy exit codes
 var TIDY_WARN = 1;
