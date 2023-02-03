@@ -1,0 +1,11 @@
+# `package.json` is published to npm, so everything added is included in the installed tarball.
+# Using `.npmignore` over the `files` key saves some bytes, which should improve installation performance slightly
+.c9*
+.github/
+.settings
+.yarn_lock
+#The IDE folder
+.idea
+
+examples/
+test/
