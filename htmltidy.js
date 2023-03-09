@@ -156,10 +156,20 @@ function chooseExec() {
       throw new Error('unsupported execution platform');
   }
   tidyExe = path.join(__dirname, 'bin', tidyExe);
-
-  var existsSync = fs.existsSync || path.existsSync; // node > 0.6
-  if (!existsSync(tidyExe))
-    throw new Error('missing tidy executable: ' + tidyExe);
+  if (typeof fs.statSync === "function") {
+    try {
+      var stats = fs.statSync(tidyExe);
+      if (!(stats.mode & (fs.constants.S_IXUSR | fs.constants.S_IXGRP | fs.constants.S_IXOTH)) && typeof fs.chmodSync === "function") {
+        fs.chmodSync(tidyExe, stats.mode | fs.constants.S_IXUSR);
+      }
+    } catch(e) {
+      throw new Error('missing tidy executable: ' + tidyExe);
+    }
+  } else {
+    var existsSync = fs.existsSync || path.existsSync; // node > 0.6
+    if (!existsSync(tidyExe))
+      throw new Error('missing tidy executable: ' + tidyExe);
+  }
   return tidyExe;
 }
 
