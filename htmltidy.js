@@ -1,8 +1,8 @@
-var {Stream} = require('stream');
-var {inherits} = require('util');
+var { Stream } = require('stream');
+var { inherits } = require('util');
 var fs = require('fs');
 var path = require('path');
-var {spawn} = require('child_process');
+var { spawn } = require('child_process');
 
 // tidy exit codes
 var TIDY_WARN = 1;
@@ -16,14 +16,14 @@ var DEFAULT_OPTS = {
   quiet: false
 };
 
-// choose suitable executable
-var tidyExec = chooseExec();
 
-function TidyWorker(opts) {
+function TidyWorker(opts, bin) {
   Stream.call(this);
 
   // Store a reference to the merged options for consumption by error reporting logic
   var mergedOpts = merge(opts, DEFAULT_OPTS);
+  // choose suitable executable
+  var tidyExec = bin ? bin : chooseExec()
 
   this.writable = true;
   this.readable = true;
@@ -104,11 +104,11 @@ TidyWorker.prototype.destroy = function () {
   this.emit('close');
 };
 
-function createWorker(opts) {
-  return new TidyWorker(opts);
+function createWorker(opts, bin) {
+  return new TidyWorker(opts, bin);
 }
 
-function tidy(text, opts, cb) {
+function tidy(text, opts, cb, bin) {
   // options are optional
   if (typeof opts == 'function') {
     cb = opts;
@@ -117,7 +117,7 @@ function tidy(text, opts, cb) {
   if (typeof cb != 'function')
     throw new Error('no callback provided for tidy');
 
-  var worker = new TidyWorker(opts);
+  var worker = new TidyWorker(opts, bin);
   var result = '';
   var error = '';
   worker.on('data', function (data) {
