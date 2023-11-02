@@ -3,6 +3,7 @@
   "version": "1.1.1",
   "description": "HTML Tidy",
   "main": "htmltidy.js",
+  "type": "commonjs",
   "scripts": {
     "test": "mocha test/*.js --reporter spec --timeout 15000"
   },
