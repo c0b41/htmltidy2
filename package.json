@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/c0b41/htmltidy2",
   "engines": {
-    "node": ">= 14 || >= 16"
+    "node": ">= 16"
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
