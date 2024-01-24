@@ -32,7 +32,7 @@ tidy('<table><tr><td>badly formatted html</tr>', function (err, html) {
 
 **tidy(text, [options], callback, binary)**
 
-Clean html like text according optional configuration [tidy options](http://api.html-tidy.org/tidy/tidylib_api_5.6.0/tidy_quickref.html).
+Clean html like text according optional configuration [tidy options](https://api.html-tidy.org/tidy/quickref_5.8.0.html).
 
 Custom binary path with binary param.
 
