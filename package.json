@@ -1,6 +1,6 @@
 {
   "name": "htmltidy2",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "HTML Tidy",
   "main": "htmltidy.js",
   "type": "commonjs",
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/c0b41/htmltidy2",
   "engines": {
-    "node": ">= 16"
+    "node": ">= 18"
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
