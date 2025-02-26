@@ -1,5 +1,5 @@
 const { tidy } = require('../htmltidy')
-const fs = require('fs')
+const fs = require('node:fs')
 
 describe('Htmltidy2 Tests ', function () {
   test('Test basic : ', function (done) {
