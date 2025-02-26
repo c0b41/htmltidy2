@@ -1,3 +1,4 @@
+'use strict';
 
 var tidy = require('../htmltidy').tidy;
 var fs  = require('fs');

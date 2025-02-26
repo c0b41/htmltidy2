@@ -1,3 +1,5 @@
+'use strict';
+
 var { Stream } = require('stream');
 var { inherits } = require('util');
 var fs = require('fs');
