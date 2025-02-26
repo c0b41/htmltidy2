@@ -1,3 +1,5 @@
+'use strict';
+
 var tidy = require('../htmltidy').tidy;
 tidy('<table><tr><td>badly formatted html</tr>', {
     showErrors: true, // `Error: write EPIPE` if set to true or false

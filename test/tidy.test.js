@@ -1,3 +1,5 @@
+'use strict';
+
 const { tidy } = require('../htmltidy')
 const fs = require('fs')
 
