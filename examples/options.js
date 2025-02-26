@@ -1,6 +1,6 @@
 
 var tidy = require('../htmltidy').tidy;
-var fs = require('fs');
+var fs = require('node:fs');
 
 
 var text = '<table><tr><td>badly formatted html</tr>';

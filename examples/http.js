@@ -1,7 +1,7 @@
 
-var http = require('http');
+var http = require('node:http');
 var tidy = require('../htmltidy');
-var fs = require('fs');
+var fs = require('node:fs');
 
 // setup options
 var opts = {
